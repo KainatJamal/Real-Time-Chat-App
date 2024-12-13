@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Real-Time Chat Application  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a real-time chat application built with **React**, **Firebase**, and **Socket.IO**. The app allows users to manage contacts, send and receive messages in real-time, and get live updates on message status.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features  
+- **User Authentication**: Use `auth` for secure user login.
+- **Contact Management**: Add, edit, and delete contacts.
+- **Real-Time Messaging**:
+  - Send and receive messages instantly using **Socket.IO**.
+  - Typing indicators and message delivery glow effects.
+- **Media Upload**: Upload and send images in chats (partial functionality included).
+- **Search and Filter**: Quickly search contacts by name.
+- **Message History**: Fetch chat history with pagination.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack  
+- **Backend**: Node.js, Express.js, Socket.IO
+- **Frontend**: React.js
+- **Database & Authentication**: Firebase Firestore & Firebase Authentication
+- **Hosting**: Firebase Hosting
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## How It Works
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Contacts Management**:
+Contacts are stored in Firestore under the user's unique ID.
+Add, edit, or delete contacts using Firestore's setDoc, updateDoc, and deleteDoc.
 
-### `npm run build`
+**Messaging**:
+Real-time messaging is powered by Socket.IO.
+Messages are stored in Firestore under the sender and receiver's contact nodes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Real-Time Updates**:
+Use onSnapshot for live updates of contacts and message history.
+Typing indicators and new message glow effects for enhanced UX.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acknowledgments
+- **Socket.IO** for seamless WebSocket communication.
+- **Firebase** for authentication, database, and hosting support.
+- **React** for building the user interface.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
